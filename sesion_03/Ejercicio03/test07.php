@@ -6,7 +6,7 @@
  * Time: 16:25
  */
     Class Persona {
-        private $dni;
+        public $dni;
         public $nombre;
         public $sexo;
         public $fecha_nac;
@@ -16,16 +16,6 @@
             $this->nombre=$nombre;
             $this->sexo=$sexo;
             $this->fecha_nac=$fecha_nac;
-        }
-
-        //solucion para la variable private $dni
-        public function getDni(){
-            return $this->dni;
-        }
-
-        public function __destruct()
-        {
-            echo 'Adios mundo cruel :(';
         }
     }//fin de la clase Persona
 
@@ -47,14 +37,14 @@
     $persona = new Persona('71998055','Jesus Gonzales','M','1991-12-24');
     $empleado = new Empleado('72558965','Mathieu Gonzales','M','2012-02-22','Jefe de Area',1500,'2017-02-21');
 
-    echo $persona->getDni().'<br/>';
+    echo $persona->dni.'<br/>';
     echo $persona->nombre.'<br/>';
     echo $persona->sexo.'<br/>';
     echo $persona->fecha_nac.'<br/>';
 
     echo '<br/>';
 
-    echo $empleado->getDni().'<br/>';
+    echo $empleado->dni.'<br/>';
     echo $empleado->nombre.'<br/>';
     echo $empleado->sexo.'<br/>';
     echo $empleado->fecha_nac.'<br/>';
